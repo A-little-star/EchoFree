@@ -1,0 +1,9 @@
+{
+	"speech_list": "/home/work_nfs12/zqwang_local/data/clean_tr.lst",
+	"noise_list": "/home/work_nfs12/zqwang_local/data/noise_tr.lst",
+	"rir_list": "/home/work_nfs4_ssd/zqwang/workspace/aec/data/simu/rir_train.lst",
+	"snr_low":-5,
+	"snr_high":20,
+	"ser_low":-15,
+	"ser_high":15
+}

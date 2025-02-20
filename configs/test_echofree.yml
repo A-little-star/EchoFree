@@ -1,0 +1,29 @@
+# default conf
+
+# test
+test:
+  module_path: models.echofree
+  module_name: EchoFree
+  datareader_path: loader.datareader
+  datareader_name: DataReader
+  checkpoint: ../checkpoints/best.pt.tar
+  use_cuda: True
+
+save:
+  dir: ../decode/echofree
+  sample_rate: 16000
+
+# nnet
+nnet_conf:
+  casual: True
+  bidirectional: False
+  in_dim: 112
+  out_dim: 100
+  
+# dataloader:
+datareader:
+  filename: ./template   # 这是个模板，测试的wave list在 testlist: 下
+  sample_rate: 16000
+
+testlist:
+  goer_list: ../goertek.lst
