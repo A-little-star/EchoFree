@@ -1,0 +1,9 @@
+{
+	"speech_list": "/home/work_nfs7/xcli/work/percepnet/train/data/clean_calib.lst",
+	"noise_list": "/home/work_nfs7/xcli/work/percepnet/train/data/noise_tr.lst",
+	"rir_list": "/home/work_nfs7/xcli/work/percepnet/train/data/rir_tr.lst",
+	"snr_low":-5,
+	"snr_high":20,
+	"ser_low":-15,
+	"ser_high":15
+}

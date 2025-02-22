@@ -1,0 +1,23 @@
+# Variables
+CC = gcc
+SRC_DIR = ./module
+BIN_DIR = ./bin
+TARGET = gru
+SRC_FILE = $(SRC_DIR)/$(TARGET).c
+CFLAGS = -Wall -g
+LDFLAGS = -lm
+
+# Default target
+all: $(BIN_DIR)/$(TARGET)
+
+# Rule to build the target
+$(BIN_DIR)/$(TARGET): $(SRC_FILE)
+	@echo "Compiling $< -> $@"
+	@mkdir -p $(BIN_DIR)   # Ensure bin directory exists (Tab 缩进)
+	$(CC) $(CFLAGS) -o $@ $< $(LDFLAGS)
+
+# Clean rule
+clean:
+	rm -f $(BIN_DIR)/$(TARGET)
+
+.PHONY: all clean

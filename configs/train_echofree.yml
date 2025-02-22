@@ -1,0 +1,58 @@
+test: False
+# test: True
+
+train:
+  epoch: 2000
+  early_stop: 20
+  trainer_path: trainer.trainer
+  trainer_name: Trainer
+  module_path: models.echofree
+  module_name: EchoFree
+  dataloader_path: loader.dataloader
+  dataloader_name: make_loader
+  checkpoint: 
+  resume: 
+  reload_best_loss: True
+  reset_lr: False
+  strict: True
+  rm_stft: False
+  save_period: 1
+  seed: 1234
+
+nnet_conf:
+  casual: True
+  bidirectional: False
+  in_dim: 112
+  out_dim: 100
+
+optim:
+  name: adam
+  optimizer_kwargs:
+    lr: !!float 1.0e-3
+    weight_decay: !!float 0.00001
+  gradient_clip: 5.0
+
+scheduler:
+  mode: min
+  min_lr: !!float 1.0e-5
+  patience: 1
+  factor: 0.5
+  verbose: True
+
+logger:
+  path:
+  print_freq: 20
+
+datasets:
+  
+  train:
+    data_conf: /home/node25_tmpdata/xcli/percepnet/train/data/config_tr_tmp.json
+    
+  val:
+    data_conf: /home/node25_tmpdata/xcli/percepnet/train/data/config_cv_tmp.json
+
+  dataloader_setting:
+    batch_size: 128 #192
+    repeat: 1
+    num_workers: 16
+    seg_len: 10

@@ -1,0 +1,9 @@
+{
+	"speech_list": "/home/node25_tmpdata/xcli/percepnet/train/data/clean_cv.lst",
+	"noise_list": "/home/node25_tmpdata/xcli/percepnet/train/data/noise_cv.lst",
+	"rir_list": "/home/node25_tmpdata/xcli/percepnet/train/data/rir_cv.lst",
+	"snr_low":-5,
+	"snr_high":20,
+	"ser_low":-15,
+	"ser_high":15
+}

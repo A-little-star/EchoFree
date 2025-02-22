@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "*.m": "matlab",
+        "ctype.h": "c",
+        "stdlib.h": "c",
+        "stdio.h": "c",
+        "depthwise_conv2d.h": "c"
+    }
+}
